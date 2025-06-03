@@ -1,36 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amazon Scraper</title>
-    <link rel="stylesheet" href="/src/style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Busque Produtos na Amazon</h1>
-      <form id="search-form">
-        <input
-          type="text"
-          id="query"
-          placeholder="Digite o nome do produto"
-          required
-        />
-        <input
-          type="number"
-          id="page"
-          placeholder="Número da página"
-          min="1"
-          value="1"
-        />
-        <button type="submit">Buscar</button>
-      </form>
-    </header>
 
-    <main>
-      <div id="products-container"></div>
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scraper</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
 
-    <script src="/src/main.js"></script>
-  </body>
+<body>
+  <header>
+    <h1>Busque Produtos</h1>
+    <form id="search-form">
+      <input type="text" id="query" placeholder="Digite o nome do produto" required />
+      <input type="number" id="page" placeholder="Número da página" min="1" value="1" />
+
+      <button type="submit">Buscar</button>
+    </form>
+  </header>
+
+  <main>
+    <div id="products-container"></div>
+  </main>
+
+  <script src="/src/main.js"></script>
+</body>
+
 </html>

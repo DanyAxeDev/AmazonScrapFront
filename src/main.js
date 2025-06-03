@@ -29,13 +29,17 @@ document.getElementById("search-form").addEventListener("submit", async (e) => {
       const productElement = document.createElement("div");
       productElement.classList.add("product");
 
+      const rating = product.rating ? product.rating : "Sem informações";
+      const amountReviews = product.amountReviews ? product.amountReviews : "Sem informações";
+
       productElement.innerHTML = `
         <img src="${product.productImageURL}" alt="${product.productName}" />
         <div>
           <h3>${product.productName}</h3>
           <p>${product.price}</p>
-          <p>Quantidade de avaliações: ${product.amountReviews}</p>
-          <p>Rating: ${product.rating}</p>
+          <p>Quantidade de avaliações: ${amountReviews}</p>
+          <p>Rating: ${rating}</p>
+          <p>Loja: ${product.loja}</p>
         </div>
       `;
 
